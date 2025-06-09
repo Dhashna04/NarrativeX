@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Story Generator - Direct Access</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        
+        h1 {
+            margin-bottom: 1rem;
+            color: #7b68ee;
+        }
+        
+        p {
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background-color: #7b68ee;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #6a5acd;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Story Generator</h1>
+        <p>Welcome to the AI Story Generator! This application allows you to create amazing stories with the power of artificial intelligence.</p>
+        <p>For your project submission, you can access the story generator directly without going through the login process.</p>
+        
+        <div class="buttons">
+            <button class="btn btn-primary" id="direct-access-btn">Direct Access</button>
+            <button class="btn btn-secondary" id="login-access-btn">Login First</button>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Direct access button
+            document.getElementById('direct-access-btn').addEventListener('click', function() {
+                // Set authentication tokens directly
+                localStorage.setItem('user_logged_in', 'true');
+                localStorage.setItem('user_name', 'ProjectUser');
+                localStorage.setItem('user_email', 'project@example.com');
+                
+                // Redirect to main page
+                window.location.href = 'index.html';
+            });
+            
+            // Login access button
+            document.getElementById('login-access-btn').addEventListener('click', function() {
+                window.location.href = 'login.html';
+            });
+        });
+    </script>
+</body>
+</html>
